@@ -1,0 +1,173 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apuntes JavaScript</title>
+    <style>
+        body {
+            width: 100%;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        main {
+            width: 70%;
+            text-align: justify;
+            margin: 2vw auto;
+        }
+        p, li {
+            line-height: 1.6;
+            margin-bottom: 3vw;
+        }
+        .ejemplos {
+            width: 100%;
+            text-align: center;
+            margin: 5vw auto
+        }
+        .table {
+            border: double rgb(71, 71, 71) 3px;
+            outline: black 1px double;
+            display: grid; 
+            grid-template-columns: repeat(3, 33.33333333%);
+            grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        }
+        .table div {
+            border: dotted 1px gray;
+            padding: 5px 5px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Apuntes Clases JavaScript - NUCBA</h1>
+        <h2>Variables</h2>
+        <p>Las variables son "conteinedores" de valores;</p>
+        <p>Las mayusculas importan para las variables, asi que es distinto una variable ej.: var a = content =! var A = content </p>
+        <p>Si una variable no está inicializada todavía, su valor es <span style="font-style: italic;">undefined</span>.</p>
+        <p>Scope o ambito de una variable - es la zona en la cual una determinada variable y su valor existen.</p>
+        <p class="ejemplos">console.log(e); // undefined;</p>
+        <p class="ejemplos">var e = 1;</p>
+        <p class="ejemplos">console.log(e); // 1</p>
+        <p>En el ejemplo anterior, el ámbito de la variable "e" comienza a partir de su inicialización y "vive" hasta el final del programa. Por esta razón, el valor que muestra el primer console.log() es undefined. A esto se le llama ámbito global y es el ejemplo más sencillo. Veamos otro ejemplo:</p>
+        <div class="ejemplos">
+            <img src="Captura1.PNG" alt="">
+        </div>
+        <p>Tenemos en este caso el ambito global con el valor de a siendo 10 y el ambito local de la función x siendo su valor 5. Un ambito no interfiere en el otro, si el mismo nombre de variable es declarado adentro y afuera de una función.</p>
+        <p>El objeto window nos permite acceder al valor de la variable "a" en el ámbito global. Esto ocurre así porque las variables globales se almacenan dentro del objeto window.</p>
+        <p>Variable let:</p>
+        <p>La variable let solo exite en el ambito (scope) local (block). Vemos el ejemplo abajo:</p>
+        <div class="ejemplos">
+            <img src="Captura2.PNG" alt="">
+        </div>
+        <p>Si declaramos la variable p como let, la misma solo alcanza el nivel de la funcion for porque está siendo usada adentro, o en una declaración o expresión de una función. Let no tiene alcance global. Si usamos var, la misma no fue declarada anteriormente y fue declarada en una declaración de función portanto, después de la función, la variable p asume valor global y local, o sea, queda en 3.</p>
+        <p>Si damos console.log() antes de declarar una variable, su valor es <span style="font-style: italic;">Undefined</span>. Si nunca declaramos esta variable, da un "Reference error"</p>
+        <p>Abajo un ejercicio que esclarece la diferencia de let, var y const en una if (If retornan valores para var):</p>
+        <div class="ejemplos">
+            <img src="Captura3.PNG" alt="">    
+        </div>
+        <div class="ejemplos">
+            <img src="Captura4.PNG" alt="" width="100%">    
+        </div>
+        <div class="ejemplos">
+            <img src="Captura5.PNG" alt="">    
+        </div>
+        <p>Ahora con funcion en general:</p>
+        <div class="ejemplos">
+            <img src="Captura6.PNG" alt="">
+        </div>
+        <div class="ejemplos">
+            <img src="Captura7.PNG" alt="">
+        </div>
+        <div class="ejemplos">
+            <img src="Captura8.PNG" alt="">
+        </div>
+        <h3>Reglas básicas de nombres de variables:</h6>
+        <p>Los nombres de las variables solo pueden ser iniciadas con una letra mayuscula o minuscula o guion bajo (_).</p>
+        <p>No se pueden dejar espacios en los nombres de las variables.</p>
+        
+        <h3>Tipos de datos (valores) de las variables:</h3>
+        <p>Number (numero), string (cadena de caracteres de texto), booleano (true or false), function (funcion), undefined (no inicializada), object, null (no existe)</p>
+        <p>javaScript es un lenguaje dinamico porque identifica el tipo de dato de acuerdo con el valor de la variable automaticamente. Y por la misma variable, se puede cambiar de tipo de datos solo en cambiar su valor.</p>
+        <p>Para identificar que tipo de datos tiene una variable, ya que muchas veces está implícito por una función o otra cosa, basta usar la función typeof en console.log.</p>
+        <div class="ejemplos">
+            <img src="typeof.png" alt="" width="60%" height="auto">
+        </div>
+
+        <h3>Tipo de datos Number</h3>
+        <p>Los datos numeros se pueden asignar a una variable simplesmente poniendo = numero, o escribiendo la expresión = new Number (numero);</p>
+        <p>Constantes numericas en Javascript:</p>
+        <div class="table">
+            <div><p>Constante</p></div>
+            <div><p>Valor en javascript</p></div>
+            <div><p>Descripción</p></div>
+            <div><p>Number.POSITIVE_INFINITY</p></div>
+            <div><p>Infinity</p></div>
+            <div><p>Infinito positivo: +∞</p></div>
+            <div><p>Number.NEGATIVE_INFINITY</p></div>
+            <div><p>-Infinity</p></div>
+            <div><p>Infinito negativo: -∞</p></div>
+            <div><p>Number.MAX_VALUE</p></div>
+            <div><p>1.7976931348623157e+308</p></div>
+            <div><p>Valor más grande</p></div>
+            <div><p>Number.MIN_VALUE</p></div>
+            <div><p>5e-324</p></div>
+            <div><p>Valor más pequeño</p></div>
+            <div><p>Number.MAX_SAFE_INTEGER</p></div>
+            <div><p>9007199254740991</p></div>
+            <div><p>Valor seguro más grande</p></div>
+            <div><p>Number.MIN_SAFE_INTEGER</p></div>
+            <div><p>-9007199254740991</p></div>
+            <div><p>Valor seguro más pequeño</p></div>
+            <div><p>Number.EPSILON</p></div>
+            <div><p>(2)^-52 (2 elevado a -52)</p></div>
+            <div><p>Número muy pequeño: ε</p></div>
+            <div><p>Number.NaN</p></div>
+            <div><p>NaN</p></div>
+            <div><p>Not A Number</p></div>
+        </div>
+        <p>La conastante NaN - es un valor especial en js que significa "not a number" y puede ser el resultado de operaciones matemáticas inposibles o indeterminados</p>
+        <ul>
+            <li>0 / 0; - indeterminado</li>
+            <li>4 + "Rodrigo"; - imposible</li>
+            <li>Nan + 4 - con NaN operando</li>
+        </ul>
+        <p>Para comprobar si una variable tiene valor NaN o sea, ha fallado o da algo indeterminado, basta usar: Number.isNaN(e); // true or false</p>
+        <p>El valor NaN es definido como numerico. En otras palabras, dentro de los tipos de datos numéricos, NaN es un conjunto de números que no se pueden representar.</p>
+        <p>Resumiendo, para consultar que naturaleza tiene una variable numerica, tenemos las siguientes funciones:</p>
+        <ul>
+            <li>Number.isFinite(n) - Comproba si un numero es finito (booleano)</li>
+            <li>Number.isInteger(n) - Comproba si un numero es entero (booleano)</li>
+            <li>Number.isSafeInteger(n) - Comproba si un numero es seguro (booleano)</li>
+            <li>Number.isNaN(n) - Comproba si no es un numero (booleano)</li>
+        </ul>
+        <h3>Tipo de Datos - Strings</h3>
+        <p>Si declara una variable con valor string, poniendo sus caracteres entre comillas. O con la expresión: new String("!Hola a Todos!")</p>
+        <p>Para las strings, se recomenda usar simples comilla, o doble comilla, pero adoptar en un mismo documento una de ellas.</p>
+        <h4>Propriedade de Strings - Lenght:</h4>
+        <p>Esta propriedades nos devuelve la cantidad de caracteres de una string. Ej.:</p>
+        <div class="ejemplos">
+            <img src="Captura9.PNG" alt="">
+        </div>
+        <h4>Metodos de posicion:</h4>
+        <p>Entre los metodos de posicion, se puede usar "string".charAT(posicion) para retornar el caracter que está en dicha posición. Se puede usar también [] en el lugar de .charAT().</p>
+        <p>Otra función es usar .concat(str1, str2, str3 ...) para juntar mas de un string y componer una string completa.</p>
+        <p>Una función más es obtener la primera posición (Index) de determinada string, utilizando la función indexOF(string).- Ejemplos:</p>
+        <div class="ejemplos">
+            <img src="Captura10.PNG" alt="">
+        </div>
+        <h4>Metodos de transformación de Strings:</h4>
+        <p>Se utilizan las siguientes funciones principales de transformación de texto:</p>
+        <ul>
+            <li>string.repeat(n) - Devuelve el texto repetido n veces;</li>
+            <li>string.toLowerCase() - Devuelve el texto todo en minusculas</li>
+            <li>string.toUpperCase() - Devuelve el texto todo en mayusculas</li>
+            <li>string.trim() - Devuelve el texto sin los espacios anteriores y posteriores al mismo</li>
+        </ul>
+        <p>Ejemplos:</p>
+        <div class="ejemplos">
+            <img src="Captura11.PNG" alt="">
+        </div>
+        <a href="apuntes2.html">Siguiente página >>>>>>>>>>>>>> </a>
+    </main>
+</body>
+<script src="apuntes.js"></script>
+</html>

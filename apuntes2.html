@@ -1,0 +1,92 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apuntes JavaScript</title>
+    <style>
+        body {
+            width: 100%;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        main {
+            width: 70%;
+            text-align: justify;
+            margin: 2vw auto;
+        }
+        p, li {
+            line-height: 1.6;
+            margin-bottom: 3vw;
+        }
+        .ejemplos {
+            width: 100%;
+            text-align: center;
+            margin: 5vw auto
+        }
+        .table {
+            border: double rgb(71, 71, 71) 3px;
+            outline: black 1px double;
+            display: grid; 
+            grid-template-columns: repeat(3, 33.33333333%);
+            grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        }
+        .table div {
+            border: dotted 1px gray;
+            padding: 5px 5px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Apuntes Clases JavaScript - NUCBA - pag.2</h1>
+        <h3>Tipos de Datos - Arrays</h3>
+        <p>Arrays son conjunto o grupo de datos que tienen alguna relación entre si que son declarados en una variable.</p>
+        <p>Un array puede ser mixto, o sea tener datos de distintas naturalezas (number, string, booleanos, etc.).</p>
+        <p>Hay 2 formas de declarar una variable con valor siendo un array:</p>
+        <ul>
+            <li>Metodo literal: Entre corchetes [] , y cada elemento separado por commas - Ej.: var a = ["a", 50, true]; - Metodo recomendado</li>
+            <li>Como un objeto: var a = new Array("a", 50, true);</li>
+        </ul>
+        <h4>Propriedades del Array:</h4>
+        <p>.lenght - parecido con strings, pero esta propriedad devuelve la cantidad de elementos que contiene.</p>
+        <p>array[num] - accede al valor del elemento que está posicionado en la posición num. Los arrays tiene como su primer elemento en la posición 0. Si el valor de num es superior a la cantidad de elementos, su valor devuelto será undefined.</p>
+        <p>Al declarar un nuevo valor de arr.lenght, estas cambiando la cantidad de elementos del array haciendo con que se descarte el resto de los elementos, si el valor es menor al original por ejemplo. Ejemplos:</p>
+        <div class="ejemplos">
+            <img src="Captura12.PNG" alt="">
+        </div>
+        <p>Funciones para añadir o eliminar elementos:</p>
+        <ul>
+            <li>array.push(valor0, valor1, ...) - agrega valor0, valor1,... después del ultimo elemento del array y devuelve su nuevo lenght;</li>
+            <li>array.pop() - elimina el ultimo elemento del array y devuelve el valor de este elemento eliminado;</li>
+            <li>array.unshift(valor0 ,valor1, ...) - agrega valor0, valor1, ... al inicio del array y devuelve su nuevo lenght;</li>
+            <li>array.shift() - elimina el primer elemento del array y devuelve el valor de este elemento eliminado.</li>
+            <li>array.concat(valor0, valor1, ...) - Devuelve el valor del array agregando los valores del concat al final, pero sin modificar el array. A parte de eso, tiene una diferencia importante al ingresar otro array de valores, vea el segundo ejemplo.</li>
+            <li>Ejemplos:</li>
+            <div class="ejemplos">
+                <img src="Captura13.PNG" alt="agregar imagen 13">
+                <legend>Primer ejemplo</legend>
+            </div>
+            <div class="ejemplos">
+                <img src="Captura14.PNG" alt="agregar imagen 14">
+                <legend>Segundo ejemplo</legend>
+            </div>
+        </ul>
+        <p>Metodos de creación de arrays con base en otras variables o objectos:</p>
+        <ul>
+            <li>array.slice(ini, end) - devuelve los valores entre array[ini] y array[end], incluindo ini y EXCLUINDO end. Es bueno para crear arrays mas pequeños basado en otro mas grande;</li>
+            <li>array.splice(ini, num) - elimina y devuelve num valores empezando con el ini. A la diferencia de slice(), el splice() cambia el array inicial. El num es el tamaño del array eliminado y creado.</li>
+            <li>array.join(string) - Devuelve un string concatenando los valores de un array, separados por el string entre los parentesis.</li>
+            <li>split(string) - devuelve un array, eliminando el string entre parentesis de un string más grande que contiene este string a ser eliminado entre otros valores. Es el contrario de join./li>
+            <li>Ejemplos:</li>
+        </ul>
+        <div class="ejemplos">
+            <img src="Captura15.PNG" alt="Captura15">
+            <legend>Ejemplo 1</legend>
+        </div>
+        <div class="ejemplos">
+            <img src="Captura16.PNG" alt="Captura16">
+            <legend>Ejemplo 2</legend>
+        </div>
+        <a href="apuntes3.html">Siguiente página >>>>>>>>>>>>>> </a>
+    </main>
+</body>
