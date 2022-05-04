@@ -162,7 +162,7 @@ console.log(arr) // [1, 2, 3, 4, 5, 6] - modificó el array solo declarando nuev
 arr = arr.concat([7, 8, 9])
 console.log(arr) // [1, 2, 3, 4, 5, 6, 7, 8, 9] - 7, 8, 9 entran como valores independientes! */
 
-//slice(ini, end)
+/* //slice(ini, end)
 var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 var arr2 = arr.slice(1,4) // devuelve el valor y asigna a la variable, no modifica arr
 console.log(arr) // [1, 2, 3, 4, 5, 6, 7, 8, 9] - No modifica el array
@@ -184,4 +184,51 @@ console.log(arr2) // 1<2<3<4<5<6<7<8 - asume valor devuelto como string
 var arr = "1.2.3.4.5.6.7.8"
 var arr2 = arr.split(".")
 console.log(arr) // "1.2.3.4.5.6.7.8" - no modifica la variable
-console.log(arr2) // ["1", "2", "3", "4", "5", "6", "7", "8"] - asume valor devuelto como array de strings
+console.log(arr2) // ["1", "2", "3", "4", "5", "6", "7", "8"] - asume valor devuelto como array de strings */
+
+
+/* let objeto1 = {
+    marca: "Warwick",
+    modelo: "Corvette 5c $$",
+    color: "Black Ofc",
+    tipo: "Bajo Electrico",
+    "pais de origen": "China",
+};
+console.log(objeto1.marca) // Warwick
+console.log(objeto1.modelo) // Corvette 5c $$
+console.log(objeto1."pais de origen") // Salta error 
+console.log(objeto1["pais de origen"]) // China
+
+let objeto2 = {}
+objeto2.precio = 88.000;
+objeto2.modelo = "Streamer Basic 5c";
+objeto2.marca = "Warwick";
+objeto2.color = "Black Nirvana";
+
+console.log(objeto1.marca + objeto1.modelo + " es mejor que " + objeto2.marca + objeto2.modelo) // WarwickCorvette 5c $$ es mejor que WarwickStreamer Basic 5c
+
+objeto1.mensaje = function () {
+    alert("Este bajo es muy copado!!")
+}
+objeto1.mensaje() // Ejecuta la función
+console.log(objeto1.mensaje) // f() {"Este bajo es muy copado!!"} */
+
+function msjBajo (modelo) {
+    
+    alert("El " + modelo + " es un bajo muy copado!")
+}
+
+msjBajo("Corvette $$ 5c"); // aparece alerta "El Corvette $$ 5c es un bajo muy copado!"
+msjBajo("Streamer 5c");
+
+function msjBajo2(modelo, color, marca = "Warwick") {
+    alert("El bajo marca "+ marca + ", modelo " + modelo + " y color " + color + " es el mejor del mundo!!");
+}
+
+msjBajo2("Corvette $$ 5c", "Black ofc"); // Alerta con el mensaje: 'El bajo marca Warwick, modelo Corvette $$ 5c y color Black ofc es el mejor del mundo!!'
+
+function msjBajo3(marca = "Warwick", modelo, color) {
+    alert("El bajo marca "+ marca + ", modelo " + modelo + " y color " + color + " es el mejor del mundo!!");
+}
+
+msjBajo3("Corvette $$ 5c", "Black ofc"); // Alerta con el mensaje: 'El bajo marca Corvette $$ 5c, modelo Black ofc y color undefined es el mejor del mundo!!'

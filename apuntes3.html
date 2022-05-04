@@ -1,0 +1,68 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apuntes JavaScript</title>
+    <style>
+        body {
+            width: 100%;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        main {
+            width: 70%;
+            text-align: justify;
+            margin: 2vw auto;
+        }
+        p, li {
+            line-height: 1.6;
+            margin-bottom: 3vw;
+        }
+        span {
+            font-style: italic;
+        }
+        .ejemplos {
+            width: 100%;
+            text-align: center;
+            margin: 5vw auto
+        }
+        .table {
+            border: double rgb(71, 71, 71) 3px;
+            outline: black 1px double;
+            display: grid; 
+            grid-template-columns: repeat(3, 33.33333333%);
+            grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        }
+        .table div {
+            border: dotted 1px gray;
+            padding: 5px 5px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Apuntes Clases JavaScript - NUCBA - pag.3</h1>
+        <h3>Objetos en Javascript</h3>
+        <p>Los objetos son tipos de datos que contiene propriedades con nombres y valores, que pueden ser string, numero, booleano, o funciones (los llamados metodos).</p>
+        <p>Os objetos son declarados entre {} o atraves de new Object().</p>
+        <p>Las propriedades son declaradas entre commas. Sus valores son accedidos con: <span>nombredelobjeto.nombredelapropriedad</span></p>
+        <p>Se puede también acceder al valor de una propriedad con: <span>nombredelobjeto[nombredelapropriedad]</span></p>
+        <p>IMPORTANTE: Solo se recomienda usar la notación entre colchetes cuando el nombre de la propriedad contiene espacios, lo que es imposible con la notación con punto! Ejemplos:</p>
+        <div class="ejemplos">
+            <img src="Captura17.PNG" alt="">
+            <legend>Se nota que se tiene espacios, salta error se usamos la notación  con punto.</legend>
+        </div>
+        <p>Se puede agregar propriedades con sus valores a un objeto declarado, a partir de afuera del mismo. Ejemplo:</p>
+        <div class="ejemplos">
+            <img src="Captura18.PNG" alt=""/>
+            <legend>Creación de un objeto vacío, asignando propriedades externamente.</legend>
+        </div>
+        <p>De la misma forma, se puede declarar funciones adentro de una propriedad de un objeto - se llaman metodos.</p>
+        <div class="ejemplos">
+            <img src="Captura19.PNG" alt=""/>
+        </div>
+        <a href="apuntes4.html">Siguiente página - Funciones >>>>>>>>>>>>>> </a>
+    </main>
+</body>
+<script src="apuntes.js"></script>
+</html>
