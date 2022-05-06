@@ -232,3 +232,4 @@ function msjBajo3(marca = "Warwick", modelo, color) {
 }
 
 msjBajo3("Corvette $$ 5c", "Black ofc"); // Alerta con el mensaje: 'El bajo marca Corvette $$ 5c, modelo Black ofc y color undefined es el mejor del mundo!!'
+
