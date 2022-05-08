@@ -71,7 +71,42 @@
         <div class="ejemplos">
             <img src="Captura27.PNG" alt="">
         </div>
-        <p>Truthy and Falsy asigments: estados de Asignaciones</p>
+        <h4>La clave Switch - Condicionales:</h4>
+        <p>En el caso de aplicaciones que se usa una cantidad de <span>if... else if... else</span>, se podrá usar switch() { case value1: instrucciones; break; case value2: instrucciones2; break; ... case valueN: instruccionesN; break; default: instruccionesDefault; break; }, como en el ejemplo:</p>
+        <div class="ejemplos">
+            <img src="Captura32.PNG" alt="">
+        </div>
+        <p>La instrucción break 'rompe' la cadena de ejecuciones cuando una case (o condición) es atendida. De esta forma, se sale de la función switch, después de ejecutar la instrucción.</p>
+        <p>Important! - Si no está el break; si ejecutará el primer caso coincidente y también los posteriores, inclusive el default, mismo sin coincidir con el valor de case. Vease el ejemplo:</p>
+        <div class="ejemplos">
+            <img src="./Captura33.PNG" alt="">
+        </div>
+        <legend>
+            <div class="table table2">
+                <div style="font-weight: 700;"> Value </div>
+                <div style="font-weight: 700;">Log Text</div>
+                <div>foo es NaN o no es 1, 2, 3, 4, 5 ni 10</div>
+                <div>Por favor, selecciona un valor del 1 al 6.</div>
+                <div>10</div>
+                <div>Salida: ¿Y Cuál Es Tu Nombre?</div>
+                <div>1</div>
+                <div>Salida: Cuál Es Tu Nombre?
+                </div>
+                <div>2</div>
+                <div>Salida: Tu Nombre?
+                </div>
+                <div>3</div>
+                <div>Salida: Nombre?
+                </div>
+                <div>4</div>
+                <div>Salida: ?
+                </div>
+                <div>5</div>
+                <div>Salida: !
+                </div>
+            </div>
+        </legend>
+        <h4>Truthy and Falsy asigments: estados de Asignaciones</h4>
         <p>Una variable si fue declarada y asignada, recibe un valor truthy para una condicional, y su valor es igual al declarado. Si fue declarado y no asignado valor, su valor es undefined, y recibe falsy para una condicional. Abajo, hay un ejemplo, de una función con una condicional. Si la condicional es truthy (if(variable)), o sea tiene valor distinto de <span>'undefined', o 'NaN', o 'null', o 0 (el cero), o ' ' (string vacía)</span>, ejecuta el bloque. Si tiene falsy, ejecuta el else</p>
         <div class="ejemplos">
             <img src="Captura28.PNG" alt="">
@@ -80,7 +115,7 @@
         <div class="ejemplos">
             <img src="Captura29.PNG" alt="">
         </div>
-        <a href="apuntes4.html">Siguiente página - Funciones >>>>>>>>>>>>>> </a>
+        <a href="funciones.html">Siguiente página - Funciones >>>>>>>>>>>>>> </a>
     </main>
 </body>
 <script src="apuntes.js"></script>

@@ -1,0 +1,37 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apuntes JavaScript</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <h1>Apuntes Clases JavaScript - NUCBA - pag. 6</h1>
+        <h3>Funciones:</h3>
+        <p>Las funciones son definidas a partir de 2 formas: por declaración con la palabra function, y con una expresión de función.</p>
+        <ul>
+            <li>
+                Declaración de función - function funcName (param1, param2, etc.) { instrucciones javaScript }
+            </li>
+            <li>
+                Expresión de función - let variable = function (param1, param2, etc.) { instrucciones javaScript}. Puedes colocar un nombre de función, si necesitás incluirla adentro de si misma. let variable = function funcName (param1, param2, etc.) { instrucciones javaScript llamando a si misma.}
+            </li>
+        </ul>
+        <p>Las funciones para funcionaren, necesitan ser llamadas o sea ejecutadas. Pueden ser llamadas en el mismo scope en que fue declarada, o puede ser ejecutada como parametro de otra función o inclusive adentro de si misma. Son las llamadas funciones recursivas.</p>
+        <p>Las funciones recursivas funcionan como un bucle (loop). Para evitar su ejecución infinita, hay una condición que la limita.</p>
+        <div class="ejemplos">
+            <img src="Captura31.PNG" alt="">
+        </div>
+        <h4>Ambito de una función:</h4>
+        <p>Una variable declarada adentro de una función no puede ser accedida afuera de la misma. Esto se llama scope (ámbito) de esta función. Lo importante es que una función sí puede acceder a una variable declarada en el ámbito de esta función. En otras palabras, una función definida en el ámbito global puede acceder a todas las variables definidas en el ámbito global. Una función definida dentro de otra función también puede acceder a todas las variables definidas en su función principal y a cualquier otra variable a la que tenga acceso la función principal.</p>
+        <p>Ejemplo de esto:</p>
+        <div class="ejemplos">
+            <img src="Captura30.PNG" alt="">
+        </div>
+        <a href="#">Siguiente página -  >>>>>>>>>>>>>> </a>
+    </main>
+</body>
+<script src="apuntes.js"></script>
+</html>

@@ -343,7 +343,7 @@ existOrNot(iExist); // I really exist!!!
 existOrNot(noExist); // ... */
 
 
-let username = '';
+/* let username = '';
 let defaultName;
 
 if (username) {
@@ -359,4 +359,76 @@ console.log(defaultName) // Stranger - toma el primer como falsy y el segundo co
 
 username = 'Rodrigo';
 defaultName = username || 'Stranger';
-console.log(defaultName) // Rodrigo - toma el primer como truthy
+console.log(defaultName) // Rodrigo - toma el primer como truthy */
+
+// Las siguientes variables se definen en el ámbito global
+var num1 = 20,
+    num2 = 3,
+    apellido = 'Chamahk';
+
+// Esta función está definida en el ámbito global
+function multiply() {
+  return num1 * num2;
+}
+
+multiply(); // Devuelve 60
+
+// Un ejemplo de función anidada
+function getScore() {
+  var num1 = 2,
+      num2 = 3;
+
+  function add() {
+    return apellido + ' anotó ' + (num1 + num2);
+  }
+
+  return add();
+}
+
+let foo = function jTull (e) {
+    // instrucciones aquí ...
+    jTull(e - 1);
+    foo (e - 1);
+    arguments.callee(e - 1);
+    // cualquiera de las ejecuciones, es lo mismo
+}
+
+let mejorAlbum = 'Close To The Edge'
+
+switch (mejorAlbum) {
+    case 'Master Of Puppets': 
+        console.log('banda Metallica');
+        break;
+    case '2112': 
+        console.log('banda Rush');
+        break;
+    case 'Close To The Edge':
+        console.log('banda Yes');
+        break;
+    default:
+        console.log('Invalid band');
+        break;
+}
+var foo5;
+var output = 'Salida: ';
+switch (foo5) {
+  case 10:
+    output += '¿Y ';
+  case 1:
+    output += 'Cuál ';
+    output += 'Es ';
+  case 2:
+    output += 'Tu ';
+  case 3:
+    output += 'Nombre';
+  case 4:
+    output += '?';
+    console.log(output);
+    break;
+  case 5:
+    output += '!';
+    console.log(output);
+    break;
+  default:
+    console.log('Por favor, selecciona un valor            del 1 al 6.');
+}
