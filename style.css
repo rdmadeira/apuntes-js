@@ -1,0 +1,37 @@
+body {
+    width: 100%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+main {
+    width: 70%;
+    text-align: justify;
+    margin: 2vw auto;
+}
+p, li {
+    line-height: 1.6;
+    margin-bottom: 3vw;
+}
+span {
+    font-style: italic;
+}
+.ejemplos {
+    width: 100%;
+    text-align: center;
+    margin: 5vw auto
+}
+.ejemplos legend {
+    width: 70%;
+    margin: 0 auto 3vw;
+    text-align: justify;
+}
+.table {
+    border: double rgb(71, 71, 71) 3px;
+    outline: black 1px double;
+    display: grid; 
+    grid-template-columns: repeat(3, 33.33333333%);
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+.table div {
+    border: dotted 1px gray;
+    padding: 5px 5px;
+}

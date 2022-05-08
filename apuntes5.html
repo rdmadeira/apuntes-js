@@ -1,0 +1,78 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apuntes JavaScript</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <h1>Apuntes Clases JavaScript - NUCBA - pag. 5</h1>
+        <h3>Operadores matematicos básicos:</h3>
+        <ul>
+            <li> +  (suma);</li>
+            <li> - (resta);</li>
+            <li> * (multiplica);</li>
+            <li> / (divide);</li>
+            <li> ** (Exponenciación)</li>
+            <li> % (Remainder - devuelve el resto de una division).</li>
+            <li>Built-in mathematical operators:</li>
+            <li> += (suma o concatena y asigna el nuevo valor a la variable). Ej.: x += 1 es lo mismo que x = x+1. Interesante seguir el ejemplo abajo, para distintos tipos de valores, el operador sigue un comportamiento distinto:</li>
+            <li> *= (Multiplica y asigna su nuevo valor);</li>
+
+            <li> /= (divide una variable por un valor a la derecha y asigna a esta variable el nuevo valor);</li>
+            <div class="ejemplos">
+                <img src="Captura23.PNG" alt="">
+            </div>
+            <li> ++ (suma 1 al valor de la variable)</li>
+            <li> -- (resta 1 al valor de la variable)</li>
+
+        </ul>
+        <h3>Operadores booleanos y de comparación:</h3>
+        <ul>
+            <li> == (Igualdad)</li>
+            <li> != (No igualdad)</li>
+            <li> === (Igualdad estricta - indica que el coontenido y tipo de valor sean identicos)</li>
+            <li> || (equivale al OR en lógica)</li>
+            <li> && (equivale al AND en lógica)</li>
+            <li> ! (Negación - puesto antes de una variable, es como decir "es falso que" y el resultado va a ser 'true' para lo que era falso y 'false' para lo que era true)</li>
+            <li>
+                <, <= (menor que y menor o igual que)
+            </li>
+            <li>
+                >, >= (mayor que y mayor o igual que)
+            </li> 
+            <div class="ejemplos">
+                <img src="Captura24.PNG" alt="">
+            </div>
+        </ul>
+        <h3>Otros operadores:</h3>
+        <ul>
+            <li> , (comma en js - evalúa cada uno de sus operandos (de izquierda a derecha) y devuelve el valor del último operando. Esto le permite crear una expresión compuesta en la que se evalúan varias expresiones, siendo el valor final de la expresión compuesta el valor de la expresión más a la derecha de sus miembros. Esto se usa comúnmente para proporcionar múltiples parámetros a un ciclo for. Ej.:</li>
+            <li> = (Asignaciones de valores)</li>
+        </ul>
+        <h3>Condicionales:</h3>
+        <p>If else y if else if: </p>
+        <p>La forma de escribir de forma clásica la condicional if else es la siguiente:</p>
+        <div class="ejemplos">
+            <img src="Captura25.PNG" alt="">
+        </div>
+        <p>Se podrá escribir de forma más compacta con el operador 'ternario'. Resumiendo, son simbolos que forman un syntaxis compacta y lógica.</p>
+        <p>Su forma es:</p>
+        <p style="margin: 1vw auto; text-align: center;">condición ? expr1 : expr2</p>
+        <p>En ternário, la condición viene sin el parenthesis, el interrogación '?' simboliza el if, las expresiones vienen sin los {} corchetes, y el ':' funciona como el else. De esta forma, el ejemplo anterior se escribiria así:</p>
+        <div class="ejemplos">
+            <img src="Captura26a.PNG" alt="">
+            <legend>Se deberá notar que para 1 expresion con 2 o más ejecuciones, se agrega parenthesis, y las ejecuciónes separadas por comma ','. También la ejecución return deja de existir, y se asigna directamente su valor entre comillas. Otra forma de escribir eso sin función es:</legend>
+            <img src="Captura26b.PNG" alt="">
+        </div>
+        <p>Otro ejemplo con el operador ternario.</p>
+        <div class="ejemplos">
+            <img src="Captura27.PNG" alt="">
+        </div>
+        <a href="apuntes4.html">Siguiente página - Funciones >>>>>>>>>>>>>> </a>
+    </main>
+</body>
+<script src="apuntes.js"></script>
+</html>

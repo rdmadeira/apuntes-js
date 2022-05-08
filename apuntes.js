@@ -116,7 +116,7 @@ console.log(g1.length) // 10
 console.log("Hello Word!".length) // 11
 
 console.log("Como estas"[0]) // "C"
-let fe = "cree".concat(" en ", " tu ", " mente.") // cree
+let fe = "cree".concat(" en ", " tu ", " mente.") // cree en tu mente
 console.log(fe.indexOf("mente")) // 13
 
 let gol = "g".concat("o".repeat(10), "l")
@@ -213,7 +213,7 @@ objeto1.mensaje = function () {
 objeto1.mensaje() // Ejecuta la función
 console.log(objeto1.mensaje) // f() {"Este bajo es muy copado!!"} */
 
-function msjBajo (modelo) {
+/* function msjBajo (modelo) {
     
     alert("El " + modelo + " es un bajo muy copado!")
 }
@@ -232,4 +232,99 @@ function msjBajo3(marca = "Warwick", modelo, color) {
 }
 
 msjBajo3("Corvette $$ 5c", "Black ofc"); // Alerta con el mensaje: 'El bajo marca Corvette $$ 5c, modelo Black ofc y color undefined es el mejor del mundo!!'
+ */
 
+// Assuming the following variables
+/* foo = 'foo'
+bar = 5
+baz = true
+
+// Number + Number -> addition
+bar += 2 // 7
+
+// Boolean + Number -> addition
+baz += 1 // 2
+
+// Boolean + Boolean -> addition
+baz += false // 1
+
+// Number + String -> concatenation
+bar += 'foo' // "5foo"
+
+// String + Boolean -> concatenation
+foo += false // "foofalse"
+
+// String + String -> concatenation
+foo += 'bar' // "foobar"
+
+var a, b, c;
+
+a = b = 3, c = 4; // Returns 4 in console
+console.log(a); // 3 (left-most)
+
+var x, y, z;
+
+x = (y = 5, z = 6); // Returns 6 in console
+console.log(x); // 6 (right-most) */
+
+/* // declaración de objetos
+const songsFrom = {
+    name: 'Songs From the Wood',
+    year: 1977,
+    numberOfSongs: 10,
+}
+const benefit = {
+    name: 'Benefit',
+    year: 1970,
+    numberOfSongs: 14,
+}
+
+// declaración de variables
+const songsyear = songsFrom.year;
+const benefyear = benefit.year;
+
+// declaración de función como variable
+let albumMasViejo = function () {
+    if (songsFrom.year < benefit.year) {
+        console.log(`${songsFrom.name} es más antiguo`);
+        return false
+    } else {
+        console.log(`${benefit.name} es más antíguo`);
+        return true
+    }
+}
+console.log(albumMasViejo()) */
+
+
+const songsFrom = {
+    name: 'Songs From the Wood',
+    year: 1977,
+    numberOfSongs: 10,
+}
+const benefit = {
+    name: 'Benefit',
+    year: 1970,
+    numberOfSongs: 14,
+}
+
+// declaración de variables
+const songsyear = songsFrom.year;
+const benefyear = benefit.year;
+
+// declaración de función como variable
+let albumMasViejo = 
+    songsyear < benefyear ? (
+        console.log(`${songsFrom.name} es más antíguo`), 
+        'false' 
+    ) : (
+        console.log(`${benefit.name} es más antíguo`), 
+        'true' 
+    )
+
+console.log(albumMasViejo);
+
+
+
+const factorial = function fac(n) { return n < 2 ? 1 : n * fac(n - 1) }
+
+console.log(factorial(3)) // 6
