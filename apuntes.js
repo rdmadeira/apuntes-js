@@ -296,7 +296,7 @@ let albumMasViejo = function () {
 console.log(albumMasViejo()) */
 
 
-const songsFrom = {
+/* const songsFrom = {
     name: 'Songs From the Wood',
     year: 1977,
     numberOfSongs: 10,
@@ -327,4 +327,36 @@ console.log(albumMasViejo);
 
 const factorial = function fac(n) { return n < 2 ? 1 : n * fac(n - 1) }
 
-console.log(factorial(3)) // 6
+console.log(factorial(3)) // 6 */
+
+/* let iExist = 'I exist'
+let noExist;
+function existOrNot (x) {
+if (x) { 
+    console.log('I really exist!!!')
+} else {
+    console.log('...')
+}
+}
+
+existOrNot(iExist); // I really exist!!!
+existOrNot(noExist); // ... */
+
+
+let username = '';
+let defaultName;
+
+if (username) {
+    defaultName = username;
+} else {
+    defaultName = 'Stranger';
+}
+console.log(defaultName); // Stranger - porque username tiene valor falsy
+
+//Usando operador lógico, se puede achicar:
+defaultName = username || 'Stranger';
+console.log(defaultName) // Stranger - toma el primer como falsy y el segundo como truthy
+
+username = 'Rodrigo';
+defaultName = username || 'Stranger';
+console.log(defaultName) // Rodrigo - toma el primer como truthy
