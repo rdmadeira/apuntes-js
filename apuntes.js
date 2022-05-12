@@ -362,7 +362,7 @@ defaultName = username || 'Stranger';
 console.log(defaultName) // Rodrigo - toma el primer como truthy */
 
 // Las siguientes variables se definen en el ámbito global
-var num1 = 20,
+/* var num1 = 20,
     num2 = 3,
     apellido = 'Chamahk';
 
@@ -430,5 +430,30 @@ switch (foo5) {
     console.log(output);
     break;
   default:
-    console.log('Por favor, selecciona un valor            del 1 al 6.');
+    console.log('Por favor, selecciona un valor el 1 al 6.');
+} */
+
+const whileLoop = () => {
+    let i=1;
+    while(i < 10) {
+        console.log(i);
+        i++;
+    }
 }
+whileLoop(); // 1 2 3 4 5 6 7 8 9
+
+const forLoop = () => {
+    for(i = 1; i < 10; i++) {
+        console.log(i);
+    }
+}
+forLoop(); // 1 2 3 4 5 6 7 8 9
+
+var array1 = () => {
+    let arrayCresc = [];
+    for(n = 0; 3*n < 1000; n++) {
+    arrayCresc.push(3*n);
+}
+console.log(arrayCresc)
+}
+array1()
