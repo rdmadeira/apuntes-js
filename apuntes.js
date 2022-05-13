@@ -433,7 +433,7 @@ switch (foo5) {
     console.log('Por favor, selecciona un valor el 1 al 6.');
 } */
 
-const whileLoop = () => {
+/* const whileLoop = () => {
     let i=1;
     while(i < 10) {
         console.log(i);
@@ -456,4 +456,13 @@ var array1 = () => {
 }
 console.log(arrayCresc)
 }
-array1()
+array1() */
+
+let raceNumber = Math.floor(Math.random() * 1000);
+let earlyAdult = true;
+let runnerAge = 20;
+
+if(runnerAge > 18 && earlyAdult === true ) {
+  raceNumber += 1000;
+}
+console.log(raceNumber)
