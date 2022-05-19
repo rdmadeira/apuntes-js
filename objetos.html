@@ -1,0 +1,67 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apuntes JavaScript</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <h1>Apuntes Clases JavaScript - NUCBA - pag. 8</h1>
+        <h3>Objetos:</h3>
+        <p>Son encapsulados de datos que proporciona un mejor y más rápido y prolijo uso y envío de datos y su lectura. </p>
+        <p>Son compuestos de propriedades y cada propriedad es compuesta de nombre y valor. Sus valore spueden ser: numeros, strings, valores booleanos, imagenes, funciones, otro objeto. Las propriedades que tienen como valor funciones son llamados de metodos..</p>
+        <p>Las formas de crear un nuevo objeto son: 
+            <ul>
+                <li>Iniciador de objeto: declara y inicia ya con sus propriedades y valores entre llaves {} y las propriedades son separadas por commas. Ej.:
+                    <div class="ejemplos">
+                        <img src="Captura38.PNG" alt="">
+                    </div>
+                </li>
+                <li>Con expresion newObject: se inicia un objeto y después se declara sus propriedades, como vemos abajo:
+                    <div class="ejemplos">
+                        <img src="./Captura39.PNG" alt="">
+                    </div>
+                </li>
+                <li>Atraves de una funcion constructora, usando el termino 'this', y los argumentos como keys (claves) del objeto. Al llamar la función con los valores, se creará un objeto con claves y valores. Ej.:  
+                    <div class="ejemplos">
+                        <img src="Captura41.PNG" alt="">
+                        <legend>Se adopta como convención letra mayuscula al inicio del nombre de funcion constructora.</legend>
+                    </div>
+                </li>
+            </ul>
+        </p>
+        <p>Las propriedades no definidas en un objeto tienen valor <span style="font-style: italic;">undefined.</span></p>
+        <p>Abajo, un ejemplo de un objeto llamado 'persona', conteniendo propriedades y metodos variados.</p>
+        <div class="ejemplos">
+            <img src="./Captura35.PNG" alt="">
+        </div>
+        <p>El llamado de un valor especifico se hace por intermedio de punto(.) entre el nombre del objecto y su propriedad. Un ejemplo practico:</p>
+        <div class="ejemplos">
+            <img src="./Captura36.PNG" alt="">
+        </div>
+        <p>Para accederse a un dato de un objeto, se puede usar la syntaxis con corchetes []. La notacion de corchetes es la única al cual se puede acceder a nombres de propriedades que contienen espacios o guion o empiece con un numero. Ejemplo:</p>
+        <div class="ejemplos">
+            <img src="Captura37.PNG" alt="">
+        </div>
+        <p>También el uso de corchetes es útil se necesitás usar dinamicamente los nombres de las propriedades, atraves del uso de variables. Ej.: </p>
+        <div class="ejemplos">
+            <img src="./Captura40.PNG" alt="">
+        </div>
+        <p>A diferencia de los array, que es más amplio, los objetos tienen que tener el nombre de la propriedad/metodo, y tiene que tener un o más valores.</p>
+        <p>Objetos en javascript tienen inumeros metodos que devuelven un valor, o un array de nombres, un array de valores, el numero de items, etc. Los mas comunes son:
+            <ul>
+                <li>Object.keys(objetcName) - devuelve un array con los nombres de las propriedades y metodos del objeto.</li>
+                <li>Object.values(objectName) - devuelve un array con los valores del objeto.</li>
+                <li>Object.create(objectName) - Crea un nuevo objeto con las propriedades y metodos del objeto 'objectName'.</li>
+                <li></li>
+                <li></li>
+            </ul>
+        </p>
+
+        <a href="./objetos.html">Siguiente página - Objetos >>>>>>>>>>>>>> </a>
+    </main>
+</body>
+<script src="apuntes.js"></script>
+</html>

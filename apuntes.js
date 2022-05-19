@@ -457,7 +457,7 @@ var array1 = () => {
 console.log(arrayCresc)
 }
 array1() */
-
+/* 
 let raceNumber = Math.floor(Math.random() * 1000);
 let earlyAdult = true;
 let runnerAge = 20;
@@ -465,4 +465,90 @@ let runnerAge = 20;
 if(runnerAge > 18 && earlyAdult === true ) {
   raceNumber += 1000;
 }
-console.log(raceNumber)
+console.log(raceNumber) */
+
+//declara una variable llamada persona como un objeto. Los items de objeto son separados por una comma.
+
+const persona = {   
+    nombre: {      // propriedad objeto de persona llamado 'nombre'
+        primer:'Bob',       // propriedad de nombre llamada 'primer'
+        apellido: 'Smith',  // propriedad de nombre 'apellido'
+    },                      // cada item es separado por comma
+    edad: 32,
+    genero: 'masculino',
+    intereses: ['música', 'esquí'],
+    bio: function () {      // metodo de persona llamado 'bio'
+      alert(this.nombre.primer + ' ' + this.nombre.apellido + ' tiene ' + this.edad + ' años. Le gusta ' + this.intereses[0] + ' y ' + this.intereses[1] + '.');
+      return 'amo ' + this.intereses[0] + '!'
+    },
+    saludo: function () {   // metodo de persona 'saludo'
+        alert('Hola, Soy '+ this.nombre.primer + '. ');
+        return this.nombre.primer;
+    },
+    
+};
+
+const items = ()=> {
+    for(let item in persona) {
+        console.log(persona[item])
+    }
+}
+items();
+console.log(persona.intereses[1]) // Bob
+
+// para llamar el metodo de persona, se usa la expresion abajo, con parentesis porque es una funcion:
+/* console.log(persona.bio(), persona.saludo());  */ // Amo música! Bob       
+
+
+// Abajo, document es el objeto, getElementById() es un metodo de document, addEventListener() es un metodo de documentElement encontrado por el valor de id.
+
+/* document.getElementById('string').addEventListener('click', x(), true); */
+
+
+
+/* console.log(document.images[0]) */ // <img src="./Captura35.PNG" alt="">
+
+/* 
+var myCar = {
+    make: 'Ford',
+    model: 'Mustang',
+    year: 1969
+};
+
+var myCar = new Object();
+myCar.make = 'Ford';
+myCar.model = 'Mustang';
+myCar.year = 1969;
+
+console.log(myCar) // {make: 'Ford', model: 'Mustang', year: 1969}
+
+// Se crean y asignan cuatro variables de una sola vez, separadas por comas
+var myObj = new Object(),
+    str = 'myString',
+    rand = Math.random(),
+    obj = new Object();
+
+myObj.type                 = 'Sintaxis de puntos';
+myObj['fecha de creación'] = 'Cadena con espacios';
+myObj[str]                 = 'Valor de cadena';
+myObj[rand]                = 'Número aleatorio';
+myObj[obj]                 = 'Object';
+myObj['']                  = 'Incluso una cadena vacía';
+    
+console.log(myObj); */ // {type: 'Sintaxis de puntos', fecha de creación: 'Cadena con espacios', myString: 'Valor de cadena', 0.004412887462228232: 'Número aleatorio', [object Object]: 'Object',  "": "Incluso una cadena vacía"} 
+
+
+function Car(make, model, year) {
+    this.make = make;
+    this.model = model;
+    this.year = year;
+  }
+
+var myCar = new Car('Eagle', 'Talon TSi', 1993);
+
+let rodrigosCar = new Car('Nissan', '300ZX', 1992);
+
+console.log(myCar); // Car {make: 'Eagle', model: 'Talon TSi', year: 1993}
+
+console.log(rodrigosCar); // Car {make: 'Nissan', model: '300ZX', year: 1992}
+
