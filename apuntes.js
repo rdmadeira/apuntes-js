@@ -488,13 +488,40 @@ const persona = {
     
 };
 
-const items = ()=> {
+
+function listAllProperties(o) {
+    var objectToInspect;
+    var result = [];
+
+    for(objectToInspect = o; objectToInspect !== null;
+        objectToInspect = Object.getPrototypeOf(objectToInspect)) {
+     result = result.concat(
+         Object.getOwnPropertyNames(objectToInspect)
+     );
+ }
+
+     return result;
+}
+
+
+// (18) ['nombre', 'edad', 'genero', 'intereses', 'bio', 'saludo', 'constructor', '__defineGetter__', '__defineSetter__', 'hasOwnProperty', '__lookupGetter__', '__lookupSetter__', 'isPrototypeOf', 'propertyIsEnumerable', 'toString', 'valueOf', '__proto__', 'toLocaleString']0: "nombre"1: "edad"2: "genero"3: "intereses"4: "bio"5: "saludo"6: "constructor"7: "__defineGetter__"8: "__defineSetter__"9: "hasOwnProperty"10: "__lookupGetter__"11: "__lookupSetter__"12: "isPrototypeOf"13: "propertyIsEnumerable"14: "toString"15: "valueOf"16: "__proto__"17: "toLocaleString"length: 18[[Prototype]]: Array(0)
+console.log(listAllProperties(persona))
+
+// (6) ['nombre', 'edad', 'genero', 'intereses', 'bio', 'saludo']
+console.log(Object.getOwnPropertyNames(persona))
+
+// (6) ['nombre', 'edad', 'genero', 'intereses', 'bio', 'saludo']
+console.log(Object.keys(persona))
+
+
+
+/* const items = ()=> {
     for(let item in persona) {
         console.log(persona[item])
     }
 }
 items();
-console.log(persona.intereses[1]) // Bob
+console.log(persona.intereses[1]) */ // Bob
 
 // para llamar el metodo de persona, se usa la expresion abajo, con parentesis porque es una funcion:
 /* console.log(persona.bio(), persona.saludo());  */ // Amo música! Bob       
@@ -538,7 +565,7 @@ myObj['']                  = 'Incluso una cadena vacía';
 console.log(myObj); */ // {type: 'Sintaxis de puntos', fecha de creación: 'Cadena con espacios', myString: 'Valor de cadena', 0.004412887462228232: 'Número aleatorio', [object Object]: 'Object',  "": "Incluso una cadena vacía"} 
 
 
-function Car(make, model, year) {
+/* function Car(make, model, year) {
     this.make = make;
     this.model = model;
     this.year = year;
@@ -550,5 +577,27 @@ let rodrigosCar = new Car('Nissan', '300ZX', 1992);
 
 console.log(myCar); // Car {make: 'Eagle', model: 'Talon TSi', year: 1993}
 
-console.log(rodrigosCar); // Car {make: 'Nissan', model: '300ZX', year: 1992}
+console.log(rodrigosCar); */ // Car {make: 'Nissan', model: '300ZX', year: 1992}
 
+/* var obj = { property_1:   value_1,   // property_# puede ser un identificador...
+            2:            value_2,   // o un número...
+            // ...,
+            'property n': value_n }; // o una cadena
+ */
+
+
+var Animal = {
+    type: 'Invertebrates', // Valor predeterminado de las propiedades
+    displayType: function() {  // Método que mostrará el tipo de Animal
+        console.log(this.type);
+    }
+    };
+    
+    // Crea un nuevo tipo de animal llamado animal1
+    var mosquito = Object.create(Animal);
+    mosquito.displayType(); // Muestra: Invertebrates
+    
+    // Crea un nuevo tipo de animal llamado Fishes
+    var fish = Object.create(Animal);
+    fish.type = 'Fishes';
+    fish.displayType();    // Muestra: Fishes

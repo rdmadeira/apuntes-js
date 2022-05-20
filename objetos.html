@@ -24,15 +24,20 @@
                         <img src="./Captura39.PNG" alt="">
                     </div>
                 </li>
-                <li>Atraves de una funcion constructora, usando el termino 'this', y los argumentos como keys (claves) del objeto. Al llamar la función con los valores, se creará un objeto con claves y valores. Ej.:  
+                <li>Atraves de una funcion constructora, usando el termino 'this', y los argumentos como keys (claves) del objeto. Al llamar la función con los valores, se creará un objeto con claves y valores. Lo bueno es que crias un prototipo general, y con base en esto podes criar varios objetos con las mismas estruturas de keys. Ej.:  
                     <div class="ejemplos">
                         <img src="Captura41.PNG" alt="">
                         <legend>Se adopta como convención letra mayuscula al inicio del nombre de funcion constructora.</legend>
                     </div>
                 </li>
+                <li>Con el metodo Object.create(objectName) - Esta expresión cria un prototipo base sin el uso de la función constructora. Se puede definir valores predeterminados de propriedades. Ej.: 
+                    <div class="ejemplos">
+                        <img src="./Captura43.PNG" alt="">
+                    </div>
+                </li>
             </ul>
         </p>
-        <p>Las propriedades no definidas en un objeto tienen valor <span style="font-style: italic;">undefined.</span></p>
+        <p>Las propriedades no definida en valor en un objeto tienen valor <span style="font-style: italic;">undefined.</span>Si no existe, su valor es null.</p>
         <p>Abajo, un ejemplo de un objeto llamado 'persona', conteniendo propriedades y metodos variados.</p>
         <div class="ejemplos">
             <img src="./Captura35.PNG" alt="">
@@ -59,7 +64,7 @@
                 <li></li>
             </ul>
         </p>
-
+        
         <a href="./objetos.html">Siguiente página - Objetos >>>>>>>>>>>>>> </a>
     </main>
 </body>
