@@ -130,16 +130,26 @@ console.log(golPuro) // gooooooooool */
 
 
 
-/* var arr = [20, "cabeza", true, 30, 10]
+/*var arr = [20, "cabeza", true, 30, 10]
 console.log(arr[1]) // cabeza
 console.log(arr.length-1) // 4
 console.log(arr[7]) // undefined
-arr.length = 3 - modifica el array, toma los 3 primeros valores
-console.log(arr) // [20, "cabeza", true]
+arr.length = 3 // modifica el array, toma los 3 primeros valores
+console.log(arr) // [20, "cabeza", true]*/
 
-var arr = [20, "cabeza", true, 30, 10]
-arr.push(true, 20, "cabecao") // 8 - devuelve el valor de lenght nuevo, modifica array adicionando en el final
-console.log(arr) // [20, 'cabeza', true, 30, 10, true, 20, 'cabecao'] 
+/* var arr = [20, "cabeza", true, 30, 10]
+arr.push(true, 20, "cabecao") // 8 - 
+console.log(Object.keys(arr)) // ['0', '1', '2', '3', '4', '5', '6', '7']
+console.log(Object.values(arr)) // [20, 'cabeza', true, 30, 10, true, 20, 'cabecao']
+console.log(arr) // [20, 'cabeza', true, 30, 10, true, 20, 'cabecao']
+arr.forEach(element => {element = element.toString(); console.log(element.match(/[a-h]/gi)); console.log(element) }) */
+
+
+
+//console.log(arr.find(i => i === 'cabeza' || i === 'cabecao')) // devuelve cabeza (el primer elemento que encuentre)
+//console.log(arr.map(i => typeof i === 'number')) // [true, false, false, true, true, false, true, false]
+//console.log(typeof arr[2]) // boolean 
+/*
 arr.pop() // cabecao - Devuelve valor eliminado, modifica array, eliminando el ultimo valor
 console.log(arr) // [20, 'cabeza', true, 30, 10, true, 20] - Modifica array
 arr.unshift("cabecinha", 12, false) // 10 - Devuelve el valor de lenght nuevo, modifica array adicionando en el inicio
@@ -162,13 +172,16 @@ console.log(arr) // [1, 2, 3, 4, 5, 6] - modificó el array solo declarando nuev
 arr = arr.concat([7, 8, 9])
 console.log(arr) // [1, 2, 3, 4, 5, 6, 7, 8, 9] - 7, 8, 9 entran como valores independientes! */
 
-/* //slice(ini, end)
+ //slice(ini, end)
 var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 var arr2 = arr.slice(1,4) // devuelve el valor y asigna a la variable, no modifica arr
-console.log(arr) // [1, 2, 3, 4, 5, 6, 7, 8, 9] - No modifica el array
-console.log(arr2) // [2, 3, 4] - Valor asignado
 
-//splice(ini, num)
+
+// console.log(arr.join(', ')) // [1, 2, 3, 4, 5, 6, 7, 8, 9] - No modifica el array
+// console.log(arr)
+// console.log(arr2) // [2, 3, 4] - Valor asignado
+
+/*//splice(ini, num)
 var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 var arr2 = arr.splice(2, 3) // elimina y devuelve valores empezando con el valor2 y con tamaño 3 elementos en la secuencia
 console.log(arr) // [1, 2, 6, 7, 8, 9] - Modificó el array
@@ -474,19 +487,26 @@ const persona = {
         primer:'Bob',       // propriedad de nombre llamada 'primer'
         apellido: 'Smith',  // propriedad de nombre 'apellido'
     },                      // cada item es separado por comma
-    edad: 32,
-    genero: 'masculino',
-    intereses: ['música', 'esquí'],
-    bio: function () {      // metodo de persona llamado 'bio'
-      alert(this.nombre.primer + ' ' + this.nombre.apellido + ' tiene ' + this.edad + ' años. Le gusta ' + this.intereses[0] + ' y ' + this.intereses[1] + '.');
-      return 'amo ' + this.intereses[0] + '!'
-    },
-    saludo: function () {   // metodo de persona 'saludo'
+        edad: 32,
+        genero: 'masculino',
+        intereses: ['música', 'esquí'],
+        bio: function () {      // metodo de persona llamado 'bio'
+            alert(this.nombre.primer + ' ' + this.nombre.apellido + ' tiene ' + this.edad + ' años. Le gusta ' + this.intereses[0] + ' y ' + this.intereses[1] + '.');
+            return 'amo ' + this.intereses[0] + '!'
+        },
+        saludo: function () {   // metodo de persona 'saludo'
         alert('Hola, Soy '+ this.nombre.primer + '. ');
         return this.nombre.primer;
     },
     
 };
+
+console.log(Array.isArray(arr))
+persona.edad = 40;
+console.log(Object.keys(persona)) // ['nombre', 'edad', 'genero', 'intereses', 'bio', 'saludo']
+console.log(Object.values(persona)) // [{primer: 'Bob', apellido: 'Smith'}, 40, "masculino", ['música', 'esquí'], ƒ (), ƒ ()]
+
+
 
 
 function listAllProperties(o) {
@@ -586,7 +606,7 @@ console.log(rodrigosCar); */ // Car {make: 'Nissan', model: '300ZX', year: 1992
  */
 
 
-var Animal = {
+/* var Animal = {
     type: 'Invertebrates', // Valor predeterminado de las propiedades
     displayType: function() {  // Método que mostrará el tipo de Animal
         console.log(this.type);
@@ -600,4 +620,4 @@ var Animal = {
     // Crea un nuevo tipo de animal llamado Fishes
     var fish = Object.create(Animal);
     fish.type = 'Fishes';
-    fish.displayType();    // Muestra: Fishes
+    fish.displayType();    // Muestra: Fishes */
