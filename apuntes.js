@@ -481,7 +481,7 @@ if(runnerAge > 18 && earlyAdult === true ) {
 console.log(raceNumber) */
 
 //declara una variable llamada persona como un objeto. Los items de objeto son separados por una comma.
-
+/* 
 const persona = {   
     nombre: {      // propriedad objeto de persona llamado 'nombre'
         primer:'Bob',       // propriedad de nombre llamada 'primer'
@@ -506,9 +506,9 @@ persona.edad = 40;
 console.log(Object.keys(persona)) // ['nombre', 'edad', 'genero', 'intereses', 'bio', 'saludo']
 console.log(Object.values(persona)) // [{primer: 'Bob', apellido: 'Smith'}, 40, "masculino", ['música', 'esquí'], ƒ (), ƒ ()]
 
+ */
 
-
-
+/* 
 function listAllProperties(o) {
     var objectToInspect;
     var result = [];
@@ -523,15 +523,15 @@ function listAllProperties(o) {
      return result;
 }
 
-
+ */
 // (18) ['nombre', 'edad', 'genero', 'intereses', 'bio', 'saludo', 'constructor', '__defineGetter__', '__defineSetter__', 'hasOwnProperty', '__lookupGetter__', '__lookupSetter__', 'isPrototypeOf', 'propertyIsEnumerable', 'toString', 'valueOf', '__proto__', 'toLocaleString']0: "nombre"1: "edad"2: "genero"3: "intereses"4: "bio"5: "saludo"6: "constructor"7: "__defineGetter__"8: "__defineSetter__"9: "hasOwnProperty"10: "__lookupGetter__"11: "__lookupSetter__"12: "isPrototypeOf"13: "propertyIsEnumerable"14: "toString"15: "valueOf"16: "__proto__"17: "toLocaleString"length: 18[[Prototype]]: Array(0)
-console.log(listAllProperties(persona))
+// console.log(listAllProperties(persona))
 
 // (6) ['nombre', 'edad', 'genero', 'intereses', 'bio', 'saludo']
-console.log(Object.getOwnPropertyNames(persona))
+// console.log(Object.getOwnPropertyNames(persona))
 
 // (6) ['nombre', 'edad', 'genero', 'intereses', 'bio', 'saludo']
-console.log(Object.keys(persona))
+// console.log(Object.keys(persona))
 
 
 
@@ -621,3 +621,13 @@ console.log(rodrigosCar); */ // Car {make: 'Nissan', model: '300ZX', year: 1992
     var fish = Object.create(Animal);
     fish.type = 'Fishes';
     fish.displayType();    // Muestra: Fishes */
+
+const bands70s = ['Cactus', 'Rush', 'Montrose', 'Deep Purple', 'Yes', 'Little Feat']
+console.log(bands70s); 
+
+const orderBands = bands70s.forEach( (value, index) => {
+    return bands70s[index] = 'My ' + (index+1) + '°' + 'favourite band is ' + value;
+})
+
+console.log(bands70s.join('. ')); 
+// My 1°favourite band is Cactus, My 2°favourite band is Rush, My 3°favourite band is Montrose, My 4°favourite band is Deep Purple, My 5°favourite band is Yes, My 6°favourite band is Little Feat
