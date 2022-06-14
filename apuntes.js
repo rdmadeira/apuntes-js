@@ -631,3 +631,13 @@ const orderBands = bands70s.forEach( (value, index) => {
 
 console.log(bands70s.join('. ')); 
 // My 1°favourite band is Cactus, My 2°favourite band is Rush, My 3°favourite band is Montrose, My 4°favourite band is Deep Purple, My 5°favourite band is Yes, My 6°favourite band is Little Feat
+
+$lis = document.querySelectorAll('li');
+$lis2 = document.getElementsByTagName('li');
+$lis.forEach( (item,index) => item.setAttribute('class', 'lista el'+index));
+$lis2[1].setAttribute('id','elemento2');
+//$lis2[2].classList.contains('el2') ? $lis2[2].classList.remove('el2') : $lis2[2].classList.add('el2');
+$lis.forEach(item => item.classList.toggle('el2'));
+
+console.log($lis);
+console.log($lis2[2].classList);

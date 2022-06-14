@@ -1,0 +1,41 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apuntes JavaScript</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <h1>Apuntes Clases JavaScript - Estrutura y Manipulacion del DOM - pag. 10</h1>
+        <h3>HTMLCollection y NodeList:</h3>
+        <p>Son 'arraylike', simulaciones de array, conteniendo que contienen propriedad length y puedese acceder a un elemento con el indice entre corchetes, igual a los Arrays.</p>
+        <ul>HTMLCollection:
+            <li>Contiene los elementos de etiqueta del document.</li>
+            <li>No permite uso del metodo de array forEach.</li>
+            <li>No contiene nodes entre sus elementos.</li>
+            <li>Es el resultado de metodos como getElementsByTagName, getElementsByClassName.</li>
+        </ul>
+        <ul>NodeList: 
+            <li>Contiene los nodos de etiqueta y los subnodos, como atributos, textos, comentarios, quiebras de linea.</li>
+            <li>Permite metodos como forEach.</li>
+            <li>Es el resultado de metodos como getElementsByName, querySelectorAll.</li>
+        </ul>
+        <p>Metodos y propriedades de elementos para manipular Atributos:</p>
+        <ul>
+            <li>elemento.setAttribute('nombre-de-atributo', 'valor-del-atributo').</li>
+            <li>elemento.getAttribute('nombre-de-atributo') - devuelve el valor del atributo.</li>
+            <li>elemento.classList - devuelve un DOMTokenList, que es un array-like, con muchos metodos.</li>
+            <li>elemento.classList.contains('un-valor-de-clase')</li>
+            <li>elemento.classList.add('un-valor-de-clase') - agrega un valor a la clase</li>
+            <li>elemento.classList.remove('un-valor-de-clase') - borra el valor de la clase especificada</li>
+            <li>elemento.classList.toggle('un-valor-de-clase')</li>
+        </ul>
+        
+        
+        <a href="./array.methods.html">Siguiente página - Metodos de Arrays >>>>>>>>>>>>>> </a>
+    </main>
+</body>
+<script src="apuntes.js"></script>
+</html>
