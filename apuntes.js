@@ -173,9 +173,9 @@ arr = arr.concat([7, 8, 9])
 console.log(arr) // [1, 2, 3, 4, 5, 6, 7, 8, 9] - 7, 8, 9 entran como valores independientes! */
 
  //slice(ini, end)
-var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+/* var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 var arr2 = arr.slice(1,4) // devuelve el valor y asigna a la variable, no modifica arr
-
+ */
 
 // console.log(arr.join(', ')) // [1, 2, 3, 4, 5, 6, 7, 8, 9] - No modifica el array
 // console.log(arr)
@@ -622,7 +622,7 @@ console.log(rodrigosCar); */ // Car {make: 'Nissan', model: '300ZX', year: 1992
     fish.type = 'Fishes';
     fish.displayType();    // Muestra: Fishes */
 
-const bands70s = ['Cactus', 'Rush', 'Montrose', 'Deep Purple', 'Yes', 'Little Feat']
+/* const bands70s = ['Cactus', 'Rush', 'Montrose', 'Deep Purple', 'Yes', 'Little Feat']
 console.log(bands70s); 
 
 const orderBands = bands70s.forEach( (value, index) => {
@@ -640,4 +640,14 @@ $lis2[1].setAttribute('id','elemento2');
 $lis.forEach(item => item.classList.toggle('el2'));
 
 console.log($lis);
-console.log($lis2[2].classList);
+console.log($lis2[2].classList); */
+
+
+function logText () {
+    console.log(this.responseText);
+  }
+  
+  var newReq = new XMLHttpRequest();
+  newReq.addEventListener("load", logText);
+  newReq.open("GET", "http://www.example.org/example.txt");
+  newReq.send();
