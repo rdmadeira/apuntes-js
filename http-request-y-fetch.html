@@ -16,15 +16,29 @@
         <div class="ejemplos">
             <img src="./Captura48.PNG" alt="" srcset="">
         </div>
+        <h3>Función construtora de Promise:</h3>
+        <p>La nueva Promise guardada en una variable acepta una función como paramero, la cual tiene 2 parametros que devuelven el valor de respuesta validada y respuesta rejectada. Ej.: </p>
+        <div class="ejemplos"><img src="./Captura51.PNG" alt=""></div>
         <h3>Fetch API:</h3>
         <p>Es la forma más moderna y más poderosa. Abre una 'Promise' que genera un procesamiento asincrono, de petición. Se usa como fetch('URL'), para mandar la petición, y contiene métodos interesantes.</p>
+        <p>Pare evitar el llamado hell calllback (Funciones callback adentro de otras funciones callback en cascada, generando un desprolijo arreglo de codigo), se usa el chaining mode (modo de cadena), utilizando cada callback adentro del metodo then o catch. El catch en el final de la cadena se aplica en todo el 'Promise object' creado por fetch.</p>
         <ul>
-            <li>.then(callback)</li>
-            <li>.catch(callback)</li>
+            <li>.then(callback) - en caso de status fulfilled (cumplida).</li>
+            <li>.catch(callback) - en caso de un error en algún promise.then(), se aplica la función callback declarada en catch(callback)</li>
         </ul>
         <div class="ejemplos">
             <img src="./Captura49.PNG" alt="" srcset="">
+            <legend>Ejemplo de metodo 'chaining' o cadena y de metodos then y catch.</legend>
         </div>
+        <p>El metodo .then() acepta 2 parametros: 1- callback de si cumplido (resolve); 2- callback de rechazo (reject). Las funciones callback son asincronas y son 'triggadas' cuando se cumple el promise como 'fulfilled' o error. Devuelve una 'Promise' de estado 'pending'. Notase que para el error de petición, no se hace el uso de catch(). Se escribe de esta forma:</p>
+        <div class="ejemplos">
+            <img src="./Captura50.PNG" alt="">
+            <legend>Metodo then() con callbacks de cumplido y de rechazo.</legend>
+        </div>
+        <h4>Funciones asíncronas con <span>async</span> y <span>await</span>:</h4>
+        <p>El uso de la sentencia <span>async</span> antes de la función al declararla retorna un objeto <span>AsyncFunction</span> como una función asincrona. La ventaja de usar estas sentencias para funciones asíncronas es aplicar la misma estrutura que las funciones convencionales síncronas, simplificando el código.</p>
+        <P>AL LLAMAR LA FUNCIÓN ASÍNCRONA, DEVUELVE UNA <span>Promise</span> CON ESTADO <span>Pending</span>. LA FUNCIÓN AL RETORNAR DEVUELVE UN VALOR Y EL PROMISE SE RESUELVE CON ESTE VALOR RETORNADO. CUANDO GENERA UNA EXCEPCIÓN O UN VALOR, LA <span>Promise</span> SE RECHAZARÁ CON EL VALOR GENERADO.</P>
+        <p>La sentencia <span>await</span> se usa adentro de del objeto funcion asíncrona, y cria como una pausa para el resultado, antes de leer la próxima línea.</p>
 
         <a href="./array.methods.html">Siguiente página - Asyncronismo y Fetch >>>>>>>>>>>>>> </a>
     </main>

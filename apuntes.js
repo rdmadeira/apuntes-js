@@ -643,11 +643,59 @@ console.log($lis);
 console.log($lis2[2].classList); */
 
 
-function logText () {
+/* function logText () {
     console.log(this.responseText);
   }
   
   var newReq = new XMLHttpRequest();
   newReq.addEventListener("load", logText);
   newReq.open("GET", "http://www.example.org/example.txt");
-  newReq.send();
+  newReq.send(); */
+
+  const newFetch = fetch('https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json');
+  
+  // response es el parametro de la callback de cumplido, y error el parametro de la callback de rechazo. Es una forma de no usar el catch, pero se palica solo al primer then.
+  newFetch
+  .then( 
+    response => { console.log(response.url); return response.json();}, // callback de Cumplido
+    error => {console.log(`Error de escritura ${error}`); alert(`Error de escritura ${error}`)} // Callback de Rechazo
+  )
+  .then( 
+    data => {
+        console.log(data);
+        const names = [];
+        data.forEach (element => {names.push(element.name)});
+        alert(`Este son los productos disponibles: ${names.join(', ')}.`);
+    }
+  )
+
+  const myPromise = new Promise(function (myResolve, myReject){
+    function esPrimo(num){
+        for(let i = 2,raiz=Math.sqrt(num); i <= raiz; i++){
+            if(num%i===0){
+                return false
+            } 
+        }
+        return num > 1;
+    }
+    
+    let numeros = '';
+    for(let x=0; x<=1000000; x++){
+        if(esPrimo(x)){
+            numeros = numeros.concat(x.toString(), ', ')
+        }
+    }
+    
+    if(numeros===''){
+       return myReject('numeros falsos!');
+    }
+    return myResolve(`${numeros}`);
+  });
+  myPromise.then(
+    result => console.log(result) // devuelve string con los nros primos
+  ) .catch(
+    error => console.error(error) // devuelve 'numeros falsos!'
+  )
+
+  const otherFetch = fetch('https://swapi.dev/api/people/');
+  otherFetch.then(res=>{return res.json()}).then(data=>{const results = data.results; console.log(results.filter(item=>item.name==='Darth Vader'));});
