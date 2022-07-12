@@ -643,11 +643,22 @@ console.log($lis);
 console.log($lis2[2].classList); */
 
 
-function logText () {
+/* function logText () {
     console.log(this.responseText);
   }
   
   var newReq = new XMLHttpRequest();
   newReq.addEventListener("load", logText);
   newReq.open("GET", "http://www.example.org/example.txt");
-  newReq.send();
+  newReq.send(); */
+
+  async function getProducts() {
+    try {
+        const resp = await fetch('https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json');
+        let getObject = await resp.json(); 
+        console.log(getObject);
+    } catch(err) {
+        console.error(err);
+    }
+}
+  getProducts();
