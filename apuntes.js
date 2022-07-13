@@ -711,4 +711,5 @@ console.log($lis2[2].classList); */
 
   const otherFetch = fetch('https://swapi.dev/api/people/');
   otherFetch.then(res=>{return res.json()}).then(data=>{const results = data.results; console.log(results.filter(item=>item.name==='Darth Vader'));});
->>>>>>> da358d243dd1d36ed8d6326722088677efd9e883
+
+  
