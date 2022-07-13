@@ -29,10 +29,15 @@ window.onload = function (){
     }
     nodeListOfText();
     
+    /* ********************** *************************** *************** */
     
-    document.getElementById('div1').addEventListener('click', function(){
+    const blueDiv =  document.getElementById('div1');
+    blueDiv.addEventListener('click', function(){
         const este = this;
         este.innerHTML = `<h2>Este es el this: ${este.id} </h2>`;
         console.log(este);
     })
+    blueDiv.width100 = function(){this.style.width = '100vw'; console.log(this);setTimeout(()=>{this.style.width = '80vw'},2000)}
+
+    document.getElementById('btn-1').addEventListener('click', ()=>blueDiv.width100())
 }

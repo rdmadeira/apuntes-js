@@ -652,7 +652,7 @@ console.log($lis2[2].classList); */
   newReq.open("GET", "http://www.example.org/example.txt");
   newReq.send(); */
 
-
+/* 
   async function getProducts() {
     try {
         const resp = await fetch('https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json');
@@ -711,5 +711,37 @@ console.log($lis2[2].classList); */
 
   const otherFetch = fetch('https://swapi.dev/api/people/');
   otherFetch.then(res=>{return res.json()}).then(data=>{const results = data.results; console.log(results.filter(item=>item.name==='Darth Vader'));});
-
+ */
   
+const obj1 = {
+    city:'Villa General Belgrano',
+    population: '8257',
+    province: 'Córdoba',
+    elevation: '757 meters',
+    newPopulation: () => {
+        this.population = (Number(population)*1.6).toString();
+        console.log(this.population);
+    }
+    ejecuteNewPopulation:
+}
+const obj2 = {
+    city: 'Ficcion',
+    population:'358251',
+    province: 'Córdoba',
+    elevation: '210 meters'
+}
+
+obj1.newPopulation.bind(obj2)
+
+
+
+  const blueDiv =  document.getElementById('div1');
+  blueDiv.addEventListener('click', function(){
+      const este = this;
+      este.innerHTML = `<h2>Este es el this: ${este.id} </h2>`;
+      console.log(este);
+  })
+  blueDiv.width100 = function(){this.style.width = '100vw'; console.log(this);setTimeout(()=>{this.style.width = '80vw'},2000)}
+
+  document.getElementById('btn-1').addEventListener('click', ()=>blueDiv.width100())
+
