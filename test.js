@@ -29,4 +29,10 @@ window.onload = function (){
     }
     nodeListOfText();
     
+    
+    document.getElementById('div1').addEventListener('click', function(){
+        const este = this;
+        este.innerHTML = `<h2>Este es el this: ${este.id} </h2>`;
+        console.log(este);
+    })
 }
