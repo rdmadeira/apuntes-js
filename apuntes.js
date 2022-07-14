@@ -713,27 +713,45 @@ console.log($lis2[2].classList); */
   otherFetch.then(res=>{return res.json()}).then(data=>{const results = data.results; console.log(results.filter(item=>item.name==='Darth Vader'));});
  */
   
+  // En este caso, el método es una función convencional, y más allá el método es llamado en el ámbito global, el this es el objeto obj1. // 
 const obj1 = {
     city:'Villa General Belgrano',
     population: '8257',
     province: 'Córdoba',
     elevation: '757 meters',
-    newPopulation: () => {
-        this.population = (Number(population)*1.6).toString();
+    newPopulation: function() {
+        this.population = ((Number(this.population))*1.6).toString();
         console.log(this.population);
-    }
-    ejecuteNewPopulation:
+    },
 }
+
+obj1.newPopulation() // obj1.population = 13211
+console.log(obj1.population);
+                     // console.log(this.population) // 13211
+
+
+// En este caso, el método fue definido con una arrow function, y el ámbito del this es el ambito externo, o sea es el objeto window(el obj raiz):
+/* const obj1 = {
+    city:'Villa General Belgrano',
+    population: '8257',
+    province: 'Córdoba',
+    elevation: '757 meters',
+    newPopulation: ()=> {
+        this.population = ((Number(this.population))*1.6).toString();
+        console.log(this);
+    },
+}
+obj1.newPopulation(); */ // obj1.population = NaN
+                     // console.log(this) // Window {...}
+// obj1.ejecuteNewPopulation()
+
+                     
 const obj2 = {
     city: 'Ficcion',
     population:'358251',
     province: 'Córdoba',
     elevation: '210 meters'
 }
-
-obj1.newPopulation.bind(obj2)
-
-
 
   const blueDiv =  document.getElementById('div1');
   blueDiv.addEventListener('click', function(){

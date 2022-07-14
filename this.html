@@ -12,8 +12,21 @@
         <h1>Apuntes Clases JavaScript - Objeto this y sus Scopes - pag. 12</h1>
         <h3>This asociado a Objetos:</h3>        
         <p>Un objeto al ser creado, genera automaticamente un <span>this</span>. Este <span>this</span> representa el próprio objeto.</p>
-        <p>El this va a representar un objeto, dependendo adonde se ejecuta el método, y como se declara la función callback.</p>
+        <p>El this va a representar un objeto, dependendo adonde se ejecuta el método si es una arrow function o si es una funcion convencional, y como se declara la función callback adentro de otra función.</p>
+        <p>Al usar eventos de escucha o otros métodos de manipulación, si la callback es una función convencional, el <span>this</span> devuelto es el objeto elemento. Esto porque el metodo usado es un método de este elemento. Ej.: document.getElementById().addEventListener().</p>
+        <p>Si en el método de escucha si usa una arrow function como parametro, el <span>this</span> devuelto es el objeto padre, o sea objeto window.</p>
 
+        <p style="text-transform:uppercase ">Importante! Las Arrow functions no se deben usar en las declaraciones de métodos, ya que no tiene su próprio this. Vea la imagen:</p>
+        <div class="ejemplos">
+            <img src="./Captura53.PNG" alt="">
+        </div>
+        <ul>
+            <li>Una funcion declarada convencionalmente (function name(){ ... }), cria un this proprio, con un escopo interno, a menos que sea un método de un objeto, en este caso, el this de la función asume ser el objeto. <img src="./Captura52.PNG" alt="" width="100%"></li>
+            
+            <li>Como dicho arriba, se salienta que el this de un método de objeto, es el próprio objeto.</li>
+            <li>Una función declarada como una arrow function no tiene su proprio<span>this</span>. O sea, el this asume el escopo externo a esta callback, referiendose al objeto padre.</li>
+            <li>Para el caso de que un método usa una callback (función) con una expresión conteniendo un <span>this</span>  adentro esta callback debe ser una arrow function por los motivos citados anteriormente.</li>
+        </ul>
 
         <div id="div1" style="width: 80vw; height: 60vh;background-color: blue;">
             
