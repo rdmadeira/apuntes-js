@@ -9,14 +9,14 @@
 </head>
 <body>
     <main> 
-        <h1>Apuntes Clases JavaScript - Objeto this y sus Scopes - pag. 12</h1>
+        <h1>Apuntes Clases JavaScript - Objeto this y sus Scopes, sin y con arrow functions - pag. 12</h1>
         <h3>This asociado a Objetos:</h3>        
         <p>Un objeto al ser creado, genera automaticamente un <span>this</span>. Este <span>this</span> representa el próprio objeto.</p>
         <p>El this va a representar un objeto, dependendo adonde se ejecuta el método si es una arrow function o si es una funcion convencional, y como se declara la función callback adentro de otra función.</p>
         <p>Al usar eventos de escucha o otros métodos de manipulación, si la callback es una función convencional, el <span>this</span> devuelto es el objeto elemento. Esto porque el metodo usado es un método de este elemento. Ej.: document.getElementById().addEventListener().</p>
         <p>Si en el método de escucha si usa una arrow function como parametro, el <span>this</span> devuelto es el objeto padre, o sea objeto window.</p>
 
-        <p style="text-transform:uppercase ">Importante! Las Arrow functions no se deben usar en las declaraciones de métodos, ya que no tiene su próprio this. Vea la imagen:</p>
+        <p style="text-transform:uppercase ">Importante! Las Arrow functions no se deben usar en las declaraciones de métodos, ya que no tiene su próprio this. Las arrow functions se usan cuando se declara (como variable), o en callback functions (funciones que son parametros de otras funciones). Vea la imagen:</p>
         <div class="ejemplos">
             <img src="./Captura53.PNG" alt="">
         </div>
